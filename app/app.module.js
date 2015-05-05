@@ -1,5 +1,4 @@
-﻿/// <reference path="c:\users\stephan\documents\visual studio 2013\Projects\DietMalta\DietMalta.Web\Scripts/angular.js" />
-/// <reference path="c:\users\stephan\documents\visual studio 2013\Projects\DietMalta\DietMalta.Web\Scripts/angular-route.js" />
+﻿
 
 (function () {
     'use strict';
