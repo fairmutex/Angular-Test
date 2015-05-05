@@ -11,22 +11,20 @@
         
         // 3rd Party Modules
     ]);
-})();
+    console.log("app");
 
-
-
-(function () {
-    'use strict';
     angular.module("app").config(['$routeProvider',
         function ($routeProvider) {
         $routeProvider
-            .when('/Posts', {
-                templateUrl: 'posts/posts.html',
-                controller: 'posts/posts.js'
+            .when('/posts', {
+		     controller: 'posts',
+                templateUrl: 'app/posts/posts.html'
+               
             })
             .otherwise({
-                rediretTo:"/"
+                redirectTo:"/posts"
     });
     }]);
+    console.log("routes");
 })();
 

@@ -1,26 +1,31 @@
-﻿(function () {
+﻿
+
+(function () {
     'use strict';
 
     // Register
     angular
         .module('app.posts')
-        .controller('Posts',Posts);
+        .controller('posts',posts);
+
+
+
 
     // Inject
-    Posts.$inject =  ['$http'];
+   posts.$inject =  ['$http'];
 
     // Function
-    function Posts($http) {
-        
+    function posts($http) {
+    
         var vm = this;
 
-        $http.get('../mockData/posts.json')
+        $http.get('posts/posts.json')
             .success(function (data, status, header, config) {
-                vm.posts = data;
+		    
+                vm.posts = data.records;
             })
             .error(function (data, status, header, config) {
-                console.log('Error');
-
+               vm.posts = ['Error']; 
             });
     }
 
