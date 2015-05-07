@@ -16,15 +16,16 @@
     angular.module("app").config(['$routeProvider',
         function ($routeProvider) {
         $routeProvider
-            .when('/posts', {
+            .when('/', {
 		     controller: 'posts',
+	    controllerAs:'vm',
                 templateUrl: 'app/posts/posts.html'
                
             })
             .otherwise({
-                redirectTo:"/posts"
+                redirectTo:"/"
     });
     }]);
-    console.log("routes");
+   
 })();
 

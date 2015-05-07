@@ -19,7 +19,7 @@
     
         var vm = this;
 
-        $http.get('posts/posts.json')
+        $http.get('app/posts/posts.json')
             .success(function (data, status, header, config) {
 		    
                 vm.posts = data.records;
